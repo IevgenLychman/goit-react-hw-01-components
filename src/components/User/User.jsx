@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import {
   UserProfile,
   UserDescription,
@@ -23,7 +25,7 @@ export const User = ({
       <UserDescription>
         <UserAvatar src={avatar} alt="User avatar" />
         <UserName>{username}</UserName>
-        <UserTag>{tag}</UserTag>
+        <UserTag>@{tag}</UserTag>
         <UserLocation>{location}</UserLocation>
       </UserDescription>
       <UserStats>
@@ -42,4 +44,16 @@ export const User = ({
       </UserStats>
     </UserProfile>
   );
+};
+
+User.propTypes = {
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.exact({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }),
 };

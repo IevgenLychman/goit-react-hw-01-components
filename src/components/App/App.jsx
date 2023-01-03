@@ -1,16 +1,16 @@
 import { Container } from './App.styled';
-import { User } from '../User/User';
-import user from '../Statistics/user.json';
+import { Profile } from '../Profile/Profile';
+import profile from '../Statistics/profile.json';
 
 export const App = () => {
   return (
     <Container>
-      <User
-        username={user.username}
-        tag={user.tag}
-        location={user.location}
-        avatar={user.avatar}
-        stats={user.stats}
+      <Profile
+        username={profile.username}
+        tag={profile.tag}
+        location={profile.location}
+        avatar={profile.avatar}
+        stats={profile.stats}
       />
     </Container>
   );

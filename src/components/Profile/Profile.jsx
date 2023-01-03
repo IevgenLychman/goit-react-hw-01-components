@@ -11,9 +11,9 @@ import {
   UserStatsList,
   UserLabel,
   UserQuantity,
-} from './User.styled';
+} from './Profile.styled';
 
-export const User = ({
+export const Profile = ({
   username,
   tag,
   location,
@@ -46,7 +46,7 @@ export const User = ({
   );
 };
 
-User.propTypes = {
+Profile.propTypes = {
   username: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,

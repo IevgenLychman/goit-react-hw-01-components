@@ -1,5 +1,9 @@
 import styled from '@emotion/styled';
 
+const color = () => {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+};
+
 export const StatisticsContainer = styled.div`
   margin-top: 50px;
   border-radius: 5px;
@@ -22,6 +26,8 @@ export const Item = styled.li`
   flex-direction: column;
   text-align: center;
   padding: 0 10px;
+  color: white;
+  background-color: ${color};
   border-top: solid 1px #a5a5a5;
   :not(:last-child) {
     border-right: solid 1px #a5a5a5;
